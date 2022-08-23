@@ -1,149 +1,121 @@
 console.log('tic-tac-toe');
 
-
 let player = '';
-let firstChoice = ['first'];
+let firstChoice = ['player11'];
 console.log(firstChoice);
-let captureFirstChoice;
-let firstChoice1 = 'first';
+let firstChoice1 = 'player11';
 let count = 0
 console.log(count);
 
 let quadrants = {
     1: '',
-    2: ''
+    2: '',
+    3: '',
+    4: ''
 };
 console.log(quadrants);
 
-let keys
-for(keys in quadrants) {
-    console.log(keys);
-};
-
-//let val
-function quadrantFunc(val) {    
-    return val;
-};
-
-/*
-function sendToQuadrant(val, val1) {
-    quadrants[val] = 'b'
-};*/
-
-let foo;
-function quadrantOne(val) {
+let lever = 'off';
+function quadrantOne() {
+    let captureFirstChoice;
     captureFirstChoice = firstChoice.pop();
+
     console.log(firstChoice);
     if(firstChoice1 === captureFirstChoice) {
         quadrants[1] = 'player1';
-        console.log(quadrants[1] !== 'player1');
-        if(quadrants[1] !== 'player1') {
-                player = 'player2';
-                if(player === 'player2') {
-                quadrants[1] = 'player2';
-                };
-        //quadrants[1] = val;
-            };
-    /* else {
-        quadrants[1] = 'player2'
-    }*/
-        };
-};
-function quadrantTwo() {
-    captureFirstChoice = firstChoice.pop();
-    console.log(firstChoice);
-    if(firstChoice1 === captureFirstChoice) {
-        quadrants[1] = 'player1';
-        console.log(quadrants[1] !== 'player1') 
-    }
-    if(quadrants[1] === 'player1') {
-        player = 'player2';
-        if(player === 'player2') {
-        quadrants[2] = 'player2';
-        };
-
-    };
-    
-};
-
-
-
-/*
-function countFunc() {
-    
-    if(count === 1) {
-        let v
-        v = firstChoice.pop();
-        quadrantOne(v)
-    } 
-
-    
-    if(count === 2) {
-        //sendToQuadrant(playerTwo);
-    } 
-    if(count === 3) {
-        count = 1;
-    } 
-    console.log(count);
-};*/
-
-/*
-player = 'player1';
-    count++
-    //countFunc();
-    if(count === 1) {
-        quadrants[1] = player;
-    }
-    if(count === 2) {
-        quadrants[1] = player ;
-    }
-    if(count === 3) {
-        count = 1;
-    } 
-    console.log(count);
-*/
-
-
-const box = {
-    1:'a',
-    2:'a',
-    3:'a'
-};
-
-let key
-for(key in box) {
-    /*
-    if(box[key]) {
-        console.log('ok');
-    }; */
-    console.log(box[key]);
-};
-
-
-
-if(box[1] === 'a', box[2] === 'a', box[3] === 'b') {
-    console.log('Yes');
-}
-
-//console.log(box.hasOwnProperty(1))
-
-/*
-function quadrantTwo() {
-    captureFirstChoice = firstChoice.pop();
-    console.log(firstChoice);
-    if(firstChoice1 === captureFirstChoice) {
-        quadrants[1] = 'player1';
-    //if(quadrants[1].hasOwnProperty() ===)    
-    } else if(firstChoice1 !== captureFirstChoice) {
-        player = 'player2';
-        if(player === 'player2') {
-            quadrants[1] = 'player2';
-        };
+        lever = 'on'; 
     };    
-    //countFunc();
-    //sendToQuadrant(2)
+        if(quadrants[1] !== 'player1') {
+            player = 'player2';
+            if(player === 'player2' && lever === 'on') {
+                quadrants[1] = 'player2';
+                lever = 'off'
+            }
+            if(lever === 'off' && quadrants[1] !== 'player2') {
+                player = 'player1';
+                if(player === 'player1') {
+                    quadrants[1] = 'player1';
+                    lever = 'on';
+                };
+            };
+
+        };
 };
-*/
+function quadrantTwo() {
+    let captureFirstChoice;
+    captureFirstChoice = firstChoice.pop();
+    console.log(firstChoice);
+    if(firstChoice1 === captureFirstChoice) {
+        quadrants[2] = 'player1';
+        lever = 'on'; 
+    };    
+        if(quadrants[2] !== 'player1') {
+            
+            player = 'player2';
+            if(player === 'player2' && lever === 'on') {
+                quadrants[2] = 'player2';
+                lever = 'off'
+            }
+            if(lever === 'off' && quadrants[2] !== 'player2' ) {
+                player = 'player1';
+                if(player === 'player1') {
+                    quadrants[2] = 'player1';
+                    lever = 'on';
+                };
+            };
+
+        }; 
+};
+function quadrantThree() {
+    captureFirstChoice = firstChoice.pop();
+    console.log(firstChoice);
+    if(firstChoice1 === captureFirstChoice) {
+        quadrants[3] = 'player1'; 
+        lever = 'on';
+    };    
+        if(quadrants[3] !== 'player1') {
+            player = 'player2';
+            
+            if(player === 'player2' && lever === 'on') {
+                quadrants[3] = 'player2';
+                lever = 'off'
+            }
+            if(lever === 'off' && quadrants[3] !== 'player2') {
+                player = 'player1';
+                if(player === 'player1') {
+                    quadrants[3] = 'player1';
+                    lever = 'on';
+                };
+            };
+        }; 
+};
+function quadrantFour() {
+    captureFirstChoice = firstChoice.pop();
+    console.log(firstChoice);
+    if(firstChoice1 === captureFirstChoice) {
+        quadrants[4] = 'player1'; 
+        lever = 'on';
+    };    
+        if(quadrants[4] !== 'player1') {
+            player = 'player2';
+            
+            if(player === 'player2' && lever === 'on') {
+                quadrants[4] = 'player2';
+                lever = 'off'
+            }
+            if(lever === 'off' && quadrants[4] !== 'player2') {
+                player = 'player1';
+                if(player === 'player1') {
+                    quadrants[4] = 'player1';
+                    lever = 'on';
+                };
+            };
+
+        }; 
+};
+
+
+
 
 
 
