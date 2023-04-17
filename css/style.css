@@ -1,0 +1,50 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia;
+  
+}
+
+.outline {
+   width: 465px;
+   background-color: red;
+   margin: 100px 0 0 403px;
+}
+
+.col-1, .col-2, .col-3 {
+    width: 500px;
+    margin-left: 3px;
+}
+
+.buttonQ1, .buttonQ2, .buttonQ3, .buttonQ4, .buttonQ5, .buttonQ6, .buttonQ7, .buttonQ8, .buttonQ9 {
+    border: none;
+    background-color: rgb(240, 234, 225);
+    width: 150px;
+    height: 150px;
+    color:rgb(211, 51, 211);
+
+}
+/*
+.buttonQ1:focus {
+    background-color: green;
+}*/
+
+.buttonQ4, .buttonQ5, .buttonQ6, .buttonQ7, .buttonQ8, .buttonQ9 {
+    margin-top: 3px;
+}
+
+.line-1, .line-2, .line-3, .line-4  {
+    height: 2px;
+    background-color: red;
+    width: 455px;
+}
+
+
