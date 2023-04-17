@@ -17,8 +17,8 @@ let grid = {
     9: ''
 };
 
-function validation(val) {
-    //console.log(val);
+function validation() {
+    
     if((grid[1] === 'player1' && grid[2] === 'player1' && grid[3] === 'player1') || (grid[4] === 'player1' && grid[5] === 'player1' && grid[6] === 'player1') || (grid[7] === 'player1' && grid[8] === 'player1' && grid[9] === 'player1') //horizontal
     || (grid[1] === 'player1' && grid[4] === 'player1' && grid[7] === 'player1') || (grid[2] === 'player1' && grid[5] === 'player1' && grid[8] === 'player1') || (grid[3] === 'player1' && grid[6] === 'player1' && grid[9] === 'player1') //vertical
     || (grid[1] === 'player1' && grid[5] === 'player1' && grid[9] === 'player1') || (grid[3] === 'player1' && grid[5] === 'player1' && grid[7] === 'player1')) { //diagonal
@@ -34,7 +34,6 @@ console.log(grid);
 
 let lever = 'off';
 function gridAll(val, val2) {
-    let q1 = 'Q1'
     if(firstChoice1 === captureFirstChoice) {
         grid[val] = player;
         lever = 'on';
@@ -57,63 +56,42 @@ function gridAll(val, val2) {
             };  
         };
         validation();
-        //changeBg(player);
 };
-
-/*
-function changeBg(button){
-    if(button.id == "q1button" && button === 'player1'){
-        button.style.background = "green";
-        //document.getElementById("q2button").style.background = "transparent";
-        //document.getElementById("q3button").style.background = "transparent";
-    };
-};*/
-
-function quadrantOne() {
+function gridOne() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(1, 'Q1');
+    gridAll(1, 'G1');
   
 };
-function quadrantTwo() {
+function gridTwo() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(2, 'Q2');
+    gridAll(2, 'G2');
 };
-function quadrantThree() {
+function gridThree() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(3, 'Q3');
+    gridAll(3, 'G3');
 };
-function quadrantFour() {
+function gridFour() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(4, 'Q4');
+    gridAll(4, 'G4');
 };
-function quadrantFive() {
+function gridFive() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(5, 'Q5');
+    gridAll(5, 'G5');
 };
-function quadrantSix() {
+function gridSix() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(6, 'Q6');
+    gridAll(6, 'G6');
 };
-function quadrantSeven() {
+function gridSeven() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(7, 'Q7');
+    gridAll(7, 'G7');
 };
-function quadrantEight() {
+function gridEight() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(8, 'Q8');
+    gridAll(8, 'G8');
 };
-function quadrantNine() {
+function gridNine() {
     captureFirstChoice = firstChoice.pop();
-    gridAll(9, 'Q9');
+    gridAll(9, 'G9');
 };
-
-
-
-
-
-
-
-
-
-
 
