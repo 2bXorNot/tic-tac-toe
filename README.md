@@ -15,7 +15,7 @@ The second conditional determines if it is player number 2 turn by judging any k
 to the variable player and a nested conditional allows for a choice of a section to be made so long as player is player2 and the lever had been turned on. The lever 
 is then turned off.
 
-Now with the key/section pairing with the value player2 being regarded as false and the lever being off, player number 1 can take his turn.
+Now with the key/section pairing with the value player2 being regarded as false and the lever being off, player number 1 can take his/her turn.
 
 The last line in function gridAll calls the function validation, where all combinations that yield a winner are housed as conditionals. 
 
